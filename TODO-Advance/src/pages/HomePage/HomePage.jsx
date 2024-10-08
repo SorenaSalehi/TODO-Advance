@@ -1,12 +1,29 @@
 import React from "react";
-import AppNav from "../../component/AppNav/Appnav";
+import AppNav from "../../component/AppNav/AppNav";
+import { useNavigate } from "react-router-dom";
+import styles from "./HomePage.module.css";
 
 export default function HomePage() {
+  const navigate = useNavigate();
+
+  //navigate to form
+  function handleStart() {
+    navigate("form");
+  }
+
   return (
-    <main>
-        <AppNav/>
-      <h1>HOME PAGE</h1>
-      <button>GET STARTED</button>
-    </main>
+    <>
+      <AppNav />
+      <main className={styles.homePage}>
+        
+        <h1>TODO HOME</h1>
+        <button className={`btn`} onClick={handleStart}>
+          GET STARTED
+        </button>
+        <footer>
+          <p>© 2024 <a href="https://www.linkedin.com/in/sorenasalehi/">SORENA SALEHI</a>. All rights reserved.</p>
+        </footer>
+      </main>
+    </>
   );
 }

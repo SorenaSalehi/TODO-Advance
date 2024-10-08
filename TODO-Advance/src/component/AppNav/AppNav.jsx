@@ -1,22 +1,30 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import styles from "./AppNav.module.css";
 
 export default function AppNav() {
   return (
-    <ul>
-      <li>
-        <NavLink>Home</NavLink>
-      </li>
-      <li>
-        <NavLink>Add Task</NavLink>
-      </li>
-      <li>
-        <NavLink>Tasks list</NavLink>
-      </li>
-      <li>
-        {" "}
-        <NavLink>Tasks Finished</NavLink>
-      </li>
-    </ul>
+    <nav className={styles.AppNav}>
+      <div className={styles.logo}>
+        <NavLink to="/">
+          <img src="/public/logo.png"></img>
+          
+        </NavLink>
+      </div>
+      <ul>
+        {/* <li>
+          <NavLink to="/">Home</NavLink>
+        </li> */}
+        <li>
+          <NavLink to="/form">Add Task</NavLink>
+        </li>
+        <li>
+          <NavLink to="/tasks">Tasks</NavLink>
+        </li>
+        <li>
+          <NavLink to="/finished">Finished</NavLink>
+        </li>
+      </ul>
+    </nav>
   );
 }

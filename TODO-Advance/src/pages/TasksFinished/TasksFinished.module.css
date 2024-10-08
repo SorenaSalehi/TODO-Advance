@@ -1,0 +1,64 @@
+.finishedContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 1dvh 10dvw;
+  width: 80%;
+  height: 80dvh;
+  border-radius: 3rem;
+  overflow: hidden;
+}
+
+.finished {
+    position: relative;
+  display: flex;
+  flex-direction: column;
+  background: url(/public/finished.hd.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 52rem;
+  padding: 3rem;
+  border-radius: 2rem;
+  overflow: scroll;
+}
+
+.finished::-webkit-scrollbar {
+  display: none;
+}
+
+.finishedNum {
+  position: absolute;
+  right: 1rem;
+  font-size: 4rem;
+  color: var(--light-color);
+  border-bottom: 0.2rem solid var(--light-color);
+  width: 60%;
+  padding: 1rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(5rem);
+  z-index: 100;
+}
+
+.finishedNum span {
+  font-family: "Edu AU VIC WA NT Guides", cursive;
+  font-optical-sizing: auto;
+  color: var(--main-font-color);
+}
+
+.startBtn {
+    position: absolute;
+    right: 35rem;
+  margin-top: 12rem;
+  width: 20%;
+  font-family: "Edu AU VIC WA NT Guides", cursive;
+  font-size: 2rem;
+}
+
+.finishedList {
+    position: absolute;
+    left: 30rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  margin-top: 12rem;
+}
